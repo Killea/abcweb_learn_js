@@ -1,6 +1,6 @@
 # Our First Site
 
-[<- Go Back](internet.md)
+[<- Home](README.md)
 
 Follow the next steps to create your first site!! These steps are fast pace but follow them and know that __we will review every component of this tutorial__ throughout the course.
 

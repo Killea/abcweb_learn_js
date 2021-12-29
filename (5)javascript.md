@@ -1,6 +1,6 @@
 # JavaScript
 
-[<- Go Back](css.md)
+[<- Home](README.md)
 
 ## Definition
 

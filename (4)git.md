@@ -1,21 +1,22 @@
 # Git & Github
 
-[<- Go Back](first-site.md)
+[<- Home](README.md)
 
 ## Git
 
 > Git is a free and open source **distributed version control system** designed to handle everything from small to very large projects with speed and efficiency.
 
 - [Download and install Git](https://git-scm.com)
-- After install run the following command on your terminal. This should tell us the version of Git (Current version is `2.21.0`).
+- After install run the following command on your terminal. This should tell us the version of Git (Current version is ` 2.34.1.windows.1`).
   ```bash
   git --version
   ```
 - [Configure Git name and email](https://help.github.com/articles/setting-your-commit-email-address-in-git/)
   ```bash
-  git config --global user.name <github userID>
-  git config --global user.email <github email>
+  git config --global user.name your_git_hub_user_id
+  git config --global user.email your_git_hub_emial
   ```
+
 - To configure our Git/Github project we'll need to use our [command line interface](https://en.wikipedia.org/wiki/Command-line_interface)
 - As the commands might change between operating systems:
   - [Windows Command Prompt Cheat sheet](https://gist.github.com/jonlabelle/e8ba94cd29b8f63fd7dd3c4f95c1d210)

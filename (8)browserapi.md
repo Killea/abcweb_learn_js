@@ -1,6 +1,6 @@
 # Browser API
 
-[<- Go Back](README.md)
+[<- Home](README.md)
 
 # http-server
 

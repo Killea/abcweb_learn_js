@@ -1,6 +1,6 @@
 # CSS - Cascade Style Sheet
 
-[<- Go Back](html.md)
+[<- Home](README.md)
 
 ## Intro to CSS
 

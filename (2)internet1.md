@@ -1,8 +1,10 @@
 # Internet
 
-[<- Go Back](intro.md)
+[<- Home](README.md)
 
-## What is the Internet?
+Our main goal for this course is coding, but we need to get to know a little bit more about the Internet and how it works.
+
+## What is the Internet? 🕙
 
 The **Internet** is the backbone of the Web, the technical infrastructure that makes the Web possible. At its most basic, the Internet is a large network of computers which communicate all together.
 
@@ -66,4 +68,4 @@ Earlier we used the term "packets" to describe the format in which the data is s
 * [MDN How does the Internet work?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)
 
 ## Let's create our first site
-* [<- Introduction to Development](intro.md) - [Our First Site ->](first-site.md) 
+* [<- Introduction to Development]((1)intro5.md) - [Our First Site ->]((3)first-site.md) 

@@ -1,6 +1,6 @@
 # Node.js
 
-[<- Go Back](browser.md)
+[<- Home](README.md)
 
 - Node.js allows us to run JavaScript in different environments and run different tasks
 - Using Node we can:

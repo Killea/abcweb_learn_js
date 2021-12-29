@@ -1,6 +1,6 @@
 # Building a site using Node.js and Express
 
-[<- Go Back](nodejs.md)
+[<- Home](README.md)
 
 - Now that we know how to create a project with NPM
 - Add Express as dependency and create a web server

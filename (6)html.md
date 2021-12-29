@@ -1,6 +1,6 @@
 # HTML
 
-[<- Go Back](git.md)
+[<- Home](README.md)
 
 ## What is HTML?
 
