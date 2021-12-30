@@ -4,10 +4,12 @@ This course if mainly about JavaScript and Node.js.
 By learning JavaScript, you will be able to develop websites, desktop applications, mobile apps, and so on.
 
 
-* [Introduction to Development]((1)intro5.md)
+* [Introduction to Development]((1.0)intro5.md)
   * `Let's get some of tools.`
-* [Internet]((2)internet1.md)
+* [Internet]((1.1)internet1.md)
   * `You've surfed the Internet but how does it work?`
+* [How java script worked in the HTML]((1.1)internet1.md)
+  * `HTML, css and JS work together!`  
 * [Our First Site]((3)first-site.md)
   * `A tutorial to say hello to the world`
 * [Git & Github]((4)git.md)

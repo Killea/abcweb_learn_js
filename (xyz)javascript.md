@@ -3183,7 +3183,7 @@ constantVariable = otherValue;
 
 [Exercise 140](./exercises/js/ex_140.md)
 
-### Reduce
+### Reduce*(Optional, not suitable for our class)
 
 - The **reduce** method applies a function against an accumulator and each element in the array (from left to right) to `reduce it to a single value`
 - The reduce function that we pass as parameter accepts the following parameters:
