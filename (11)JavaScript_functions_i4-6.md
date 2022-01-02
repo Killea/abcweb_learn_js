@@ -29,7 +29,7 @@
 
 #### Practice
 
-[Exercise 100](./exercises/js/ex_100.md) 🕙
+[Exercise 100](./exercises/js/ex_100.md) 🕙 (you could check your index68.js)
 
 [Exercise 101](./exercises/js/ex_101.md)
 
@@ -248,15 +248,15 @@
 
 #### Practice
 
-[Exercise 107](./exercises/js/ex_107.md)🕙
+[Exercise 107](./exercises/js/ex_107.md)
 
 [Exercise 108](./exercises/js/ex_108.md)
 
-[Exercise 109](./exercises/js/ex_109.md)
+r[Exercise 109](./exercises/js/ex_109.md)🕙 (review if condition )
 
 [Exercise 110](./exercises/js/ex_110.md)
 
-[Exercise 111](./exercises/js/ex_111.md)
+[Exercise 111](./exercises/js/ex_111.md) 👈 (Optional! challenge yourself if 109 is done, ```even number, if condition```)
 
 [Exercise 112](./exercises/js/ex_112.md)
 

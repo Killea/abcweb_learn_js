@@ -3,14 +3,14 @@
 [<- Home](README.md)
 
 
-## Arithmetic operators 🕙🕙🕙🕙🕙
+## Arithmetic operators 
 
 It's all about math!
 
 - Arithmetic operators take numerical values (either literals or variables) as their operands and return a single numerical value
 - The standard arithmetic operators are `addition (+), subtraction (-), multiplication (*), & division (/)`
 
-### Addition✖️
+### Addition✖️ 🕙
 
 - The addition operator **(+)** produces the sum of numeric operands or string concatenation
 
@@ -57,7 +57,7 @@ It's all about math!
 
 - Also we can add variables values and literal numbers too
 
-### Subtraction➖
+### Subtraction➖ 🕙
 
 - The subtraction operator **(-)** subtracts the two number operands, producing their difference
 
@@ -96,7 +96,7 @@ It's all about math!
   console.log("Result: " + result);
   ```
 
-  ### Multiplication❌
+  ### Multiplication❌ 🕙
 
   - The multiplication operator **(\*)** produces the product of the operands
 
@@ -139,7 +139,7 @@ It's all about math!
   console.log((two + two) * four); // 16
   ```
 
-### Division➗
+### Division➗ 🕙
 
 - The division operator **(/)** produces the quotient of its operands where the left operand is the dividend and the right operand is the divisor
 
@@ -163,9 +163,9 @@ It's all about math!
 - We get **Infinity** if we try to divide by 0
 - [MDN Infinity doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
 
-### Remainder 󠀥%
+### Remainder 󠀥 <sup>/rɪˈmeɪndə/</sup>  % 🕙
 
-- The remainder operator **(%)** returns the remainder left over when one operand is divided by a second operand
+- The remainder operator **(%)** returns the remainder left over when one operand <sup>/'ɔpә,rænd/</sup> is divided by a second operand
 
   **Example:**
 
@@ -187,7 +187,7 @@ It's all about math!
 
 #### Practice
 
-[Exercise 27](./exercises/js/ex_27.md)
+[Exercise 27](./exercises/js/ex_27.md)👈 ( all +-*/%)
 
 [Exercise 28](./exercises/js/ex_28.md)
 

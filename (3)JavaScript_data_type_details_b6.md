@@ -168,7 +168,7 @@ The best student is Kevin
   console.log(variableWithoutDefinition);
   ```
 
-- We might need to assign **undefined** in some special cases
+- We might need to assign **undefined** in some special cases, most of the time we don't need to do this
 
 #### Practice
 

@@ -2,7 +2,7 @@
 
 [<- Home](README.md)
 
-# live-server
+## live-server
 
 - **live-server** is a simple, zero-configuration command-line http server
 - It is powerful enough for production usage, but it's simple and hackable enough to be used for testing, local development, and learning
@@ -2040,7 +2040,7 @@ var paragraph = document.createElement("p");
 
 [Exercise 49](./exercises/browser/ex_49.md)
 
-# Regex
+## Regex
 
 - JavaScript can use Regex as values too
 - Regex allow us to search for a strings pattern
