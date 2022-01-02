@@ -209,7 +209,7 @@
 - [Microsoft - JavaScript recursion](https://docs.microsoft.com/en-us/scripting/javascript/advanced/recursion-javascript)
 - [Difference between recursion and iteration](https://techdifferences.com/difference-between-recursion-and-iteration-2.html)
 
-### Returning a function from a function 🕙
+### Returning a function from a function (⚠️Optional)
 
 - As we know a function can return a value
 - In JavaScript functions are a type of value
