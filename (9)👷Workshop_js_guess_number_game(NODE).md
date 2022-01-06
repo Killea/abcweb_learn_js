@@ -24,6 +24,7 @@ These are libraries built by the **awesome** community which will solve most of 
 
 
 ```js
+// workshop9.js
 // npm install prompt-sync
 const terminal = require("prompt-sync")({ sigint: true });
 
