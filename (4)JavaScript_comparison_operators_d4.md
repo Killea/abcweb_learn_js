@@ -123,7 +123,7 @@ It's getting harder now!🪨
 
 [Exercise 35](./exercises/js/ex_35.md)
 
-## Logical Operators 🕙🕙
+## Logical Operators 🕙
 
 - Logical operators are typically used with Boolean (logical) values
 - When they are, they return a **Boolean** value
@@ -185,7 +185,7 @@ It's getting harder now!🪨
 - In this case we get **false** as both expressions are false
 - [MDN logical operators doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
 
-## Negation /nɪˈɡeɪʃən/  🕙🕙
+## Negation /nɪˈɡeɪʃən/  🕙
 
 - Using the not operator **!** we can negate a condition
 - If we have a **true** value and we use the not operator we get **false**

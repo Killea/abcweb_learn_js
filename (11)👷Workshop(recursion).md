@@ -29,3 +29,32 @@
 
 - [Microsoft - JavaScript recursion](https://docs.microsoft.com/en-us/scripting/javascript/advanced/recursion-javascript)
 - [Difference between recursion and iteration](https://techdifferences.com/difference-between-recursion-and-iteration-2.html)
+
+
+👷Workshop: factorial
+
+What is a factorial?
+Factorial Symbol	
+The factorial function (symbol: !) says to multiply all whole numbers from our chosen number down to 1.
+
+Examples:
+
+**factorial of 4** means 4 × 3 × 2 × 1 = 24
+
+**factorial of 7** means 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5040
+
+
+```
+
+function jc( val)
+{
+
+    if (val === 0)
+    {
+        return BigInt(1);
+    }
+    return BigInt(val)* jc(val-1);
+}
+
+console.log(jc(400))
+```

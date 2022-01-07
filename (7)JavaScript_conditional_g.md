@@ -144,7 +144,7 @@
 
 [Exercise 63](./exercises/js/ex_63.md)
 
-## true and false (true and false values) 🕙
+## true and false (truthy and falsy values) 🕙
 
 - In JavaScript we have values that are true and false
 - This means that some values might be true and some values might be false

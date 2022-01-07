@@ -42,7 +42,7 @@
   ```
 
 - Thanks we can use iteration to solve this problem
-### While🕙🕙
+### While🕙
 
 - The **while statement** creates a loop that executes a specified statement as long as the test condition evaluates to true
 - The condition is evaluated before executing the statement
@@ -163,7 +163,7 @@
 
 [Exercise 75](./exercises/js/ex_75.md) (advance)
 
-### do/while 🕙🕙
+### do/while 🕙
 
 - The **do/while** statement creates a loop that executes a specified statement until the test condition evaluates to false
 - The condition is evaluated after executing the statement, resulting in the specified statement executing **at least once**
@@ -244,7 +244,7 @@
 
 [Exercise 85](./exercises/js/ex_85.md)
 
-## For 🕙🕙
+## For 🕙
 
 - The **for** statement creates a loop that consists of three optional expressions
 - Enclosed in parentheses and separated by semicolons

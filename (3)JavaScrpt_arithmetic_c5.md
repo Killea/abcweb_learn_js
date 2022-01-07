@@ -3,7 +3,7 @@
 [<- Home](README.md)
 
 
-## Arithmetic operators 
+## Arithmetic <sup>/əˈrɪθmətɪk/</sup> operators 
 
 It's all about math!
 

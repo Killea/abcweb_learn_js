@@ -58,7 +58,7 @@ while (true) {
         console.log('You have ' + lives + ' lives');
     }
 
-    lives--;
+    lives--; // lives = lives -1;
     if (lives == 0) {
         console.log('G A M E  O V E R ! ! !');
         process.exit(0);

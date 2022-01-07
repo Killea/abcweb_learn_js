@@ -1,5 +1,5 @@
 
-# JavaScript part A (string)
+# JavaScript part A (string，number, boolean, null, undefined, type of)
 
 [<- Home](README.md)
 ### String concatenation (connect 2 or more strings)
@@ -60,7 +60,7 @@
 
 #### Practice
 
-[Exercise 15](./exercises/js/ex_15.md) 🕙
+[Exercise 15](./exercises/js/ex_15.md) (string)🕙(1)
 <details>
 <summary><b>Exercise 15</b></summary>
 
@@ -84,7 +84,7 @@ The best student is Kevin
 [Exercise 17](./exercises/js/ex_17.md)
 
 
-### Numbers🕙
+### Numbers🕙(2)
 
 - JavaScript also supports number type
 - This type of value doesn't use quotes
@@ -132,7 +132,7 @@ The best student is Kevin
 
 - We'll talk later about doing math using number type values
 
-### Boolean🕙
+### Boolean🕙(3)
 
 - This type of value only accepts `true or false` as value
 
@@ -153,7 +153,7 @@ The best student is Kevin
 [Exercise 22](./exercises/js/ex_22.md)
 
 
-### Undefined🕙
+### Undefined🕙(4)
 
 - A variable that has not been assigned a value is of type **undefined**
 - A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value
@@ -175,7 +175,7 @@ The best student is Kevin
 [Exercise 23](./exercises/js/ex_23.md)
 
 
-### Null🕙
+### Null🕙(5)
 
 - In JavaScript we also have a **null** value
 - We can assign a variable a null value
@@ -191,7 +191,7 @@ The best student is Kevin
 
 [Exercise 24](./exercises/js/ex_24.md)
 
-### typeof🕙
+### typeof🕙 (6)
 
 - The **typeof** operator returns a string indicating the type of the unevaluated operand
 
