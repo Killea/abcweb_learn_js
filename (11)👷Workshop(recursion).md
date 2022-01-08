@@ -31,7 +31,7 @@
 - [Difference between recursion and iteration](https://techdifferences.com/difference-between-recursion-and-iteration-2.html)
 
 
-👷Workshop: factorial
+👷Workshop: factorial<sup>/fækˈtɔːriəl/</sup>
 
 What is a factorial?
 Factorial Symbol	
