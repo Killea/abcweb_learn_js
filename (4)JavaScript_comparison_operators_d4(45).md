@@ -2,7 +2,7 @@
 
 [<- Home](README.md)
 
-It's getting harder now!🪨
+It's getting more difficult now!🪨
 ## Comparison operators
 
 ### Equality operators 🕙
