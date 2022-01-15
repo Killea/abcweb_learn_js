@@ -217,6 +217,6 @@ The best student is Kevin
 
 #### Practice
 
-[Exercise 25](./exercises/js/ex_25.md)
+[Exercise 25](./exercises/js/ex_25.md)👈(optional, all the data types)
 
 [Exercise 26](./exercises/js/ex_26.md)
