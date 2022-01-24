@@ -130,7 +130,7 @@
 
 #### Practice
 
-[Exercise 117](./exercises/js/ex_117.md) 🕙
+[Exercise 117](./exercises/js/ex_117.md) 
 
 [Exercise 118](./exercises/js/ex_118.md)
 
@@ -211,7 +211,7 @@
 
 #### Practice
 
-[Exercise 120](./exercises/js/ex_120.md) 🕙 (you could try to use ```for``` loop)
+[Exercise 120](./exercises/js/ex_120.md)  (you could try to use ```for``` loop)
 
 [Exercise 121](./exercises/js/ex_121.md)
 
@@ -264,7 +264,7 @@
 
 #### Practice
 
-[Exercise 123](./exercises/js/ex_123.md) 🕙 ```"to upper case".toUpperCase()```
+[Exercise 123](./exercises/js/ex_123.md)  ```"to upper case".toUpperCase()```
 
 [Exercise 124](./exercises/js/ex_124.md)
 

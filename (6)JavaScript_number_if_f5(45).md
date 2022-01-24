@@ -161,7 +161,7 @@
 
 #### Practice
 
-[Exercise 49](./exercises/js/ex_49.md)
+[Exercise 49](./exercises/js/ex_49.md) 🆚 finish this one (if condition)
 
 [Exercise 50](./exercises/js/ex_50.md)
 
@@ -198,8 +198,8 @@
 
 #### Practice
 
-[Exercise 52](./exercises/js/ex_52.md)
+[Exercise 52](./exercises/js/ex_52.md) 🆚 HomeWork: finish this one (if condition)
 
-[Exercise 53](./exercises/js/ex_53.md)
+[Exercise 53](./exercises/js/ex_53.md) 
 
 [Exercise 54](./exercises/js/ex_54.md)
