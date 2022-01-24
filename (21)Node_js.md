@@ -603,5 +603,7 @@
 
 ## Assets / Sources
 
+https://javascript.info/
+
 - [NodeSchool - Free Node.js, JavaScript and more courses](https://nodeschool.io/)
 - [Practical Node - online book](https://gittobook.org/books/185/practicalnode) (look at the PUG sections over the index)
