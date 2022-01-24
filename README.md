@@ -13,3 +13,5 @@ By learning JavaScript, you will be able to develop websites, desktop applicatio
 
 * [📚 Install node.js]((1.1)Install_node1-2(15).md)
 * [📚 JavaScript data types]((1.2)JavaScript_data_type_a2(30).md)
+
+ [test] { (1.2)JavaScript_data_type_a2(30).md | (1.2)JavaScript_data_type_a2(30).html }}
