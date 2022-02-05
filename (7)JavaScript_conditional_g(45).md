@@ -57,7 +57,6 @@ Search 'Prettier' in vs code's extension tab.
 - The switch statement evaluates an expression
 - Matching the expression's value to a case clause
 - Then executes statements associated with that case
-- If we don't break it will execute the follow the matching case
 
   ```js
   const name = "Marta";
@@ -223,4 +222,4 @@ Search 'Prettier' in vs code's extension tab.
 
 [Exercise 64](./exercises/js/ex_64.md)
 
-[Exercise 65](./exercises/js/ex_65.md)
+[Exercise 65](./exercises/js/ex_65.md) 👈🕙

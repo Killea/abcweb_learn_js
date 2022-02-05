@@ -185,7 +185,7 @@
 
   ```js
   do {
-    // we'll get a exeption or error
+    // we'll get a exception or error
   } while (true);
   ```
 
@@ -224,7 +224,7 @@
 
 #### Practice
 
-[Exercise 76](./exercises/js/ex_76.md) 👈 (do while)
+[Exercise 76](./exercises/js/ex_76.md) 
 
 [Exercise 77](./exercises/js/ex_77.md)  
 
@@ -348,6 +348,6 @@
 
 #### Practice
 
-[Exercise 98](./exercises/js/ex_98.md)
+[Exercise 98](./exercises/js/ex_98.md)👈 (Add all the numbers between 0 and 1000)
 
 [Exercise 99](./exercises/js/ex_99.md)
