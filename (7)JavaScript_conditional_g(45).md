@@ -1,30 +1,15 @@
 # JavaScript part G (Conditional)
 
 [<- Home](README.md)
-### Conditional ternary<sup>['tә:nәri]</sup> operator 🕙 (Optional, you could always use if instead)
 
-- The conditional **ternary operator** is the only JavaScript operator that takes three operands
-- This operator is frequently used as a shortcut for the if statement
-- To use this operator we do it the following way: `(condition) ? true : false`
-- If the condition is true then it will execute the code that follows the question character
-- In case it's false then it will execute the code that follows the double colon character
+### Prettier - Code formatter (off topic)
 
-  **Example:**
+We could try to install the code formatter to help you to format the code.
 
-  ```js
-  let number = 2;
-  let message = number === 2 ? "The number is 2" : "The number is not 2";
+Search 'Prettier' in vs code's extension tab.
 
-  console.log(message);
-  ```
+![Prettier](/resources/images/misc/prettier.png)
 
-#### Practice
-
-[Exercise 55](./exercises/js/ex_55.md)
-
-[Exercise 56](./exercises/js/ex_56.md)
-
-[Exercise 57](./exercises/js/ex_57.md)
 
 ### If else if 🕙
 
@@ -239,4 +224,3 @@
 [Exercise 64](./exercises/js/ex_64.md)
 
 [Exercise 65](./exercises/js/ex_65.md)
-
