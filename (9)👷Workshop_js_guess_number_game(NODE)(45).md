@@ -5,10 +5,8 @@
 
 🎮In this lesson, we will try to develop a simple game and review ```loop``` and ```if condition```.
 
-We could create a folder in your bash,
-try to use
 
-```mkdir``` to create a folder, such as ```guess_number_game```
+try create a folder, such as ```guess_number_game```
 
 then go to this folder to open vs code.
 
@@ -49,12 +47,13 @@ while (true) {
 
     else if (answerNum === randomNumber) {
         console.log('W I N N E R !🏆');
-        console.log('You lost only ' + (6 - lives) + ' lives');
+        // bug ? why? how to fix?   hint: what if I didn't lose any lives?
+        console.log('You lost only ' + (5 - lives) + ' lives');
         process.exit(0);
     }
 
     else {
-        console.log("That wasn't a number I recognise");
+        console.log("That wasn't a number I recognize");
         console.log('You have ' + lives + ' lives');
     }
 
