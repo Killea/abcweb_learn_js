@@ -4,27 +4,14 @@ This course if mainly about JavaScript and Node.js.
 By learning JavaScript, you will be able to develop websites, desktop applications, mobile apps, and so on.
 
 
-* [Introduction to Development]((1.0)intro5.md)
-  * `Let's get some of tools.`
-* [Internet]((1.1)internet1.md)
-  * `You've surfed the Internet but how does it work?`
-* [How java script worked in the HTML]((1.1)internet1.md)
-  * `HTML, css and JS work together!`  
-* [Our First Site]((3)first-site.md)
-  * `A tutorial to say hello to the world`
-* [Git & Github]((4)git.md)
-  * `git: Multiplayer Notepad`
-* [JavaScript]((5)javascript.md)
-  * `Promise you will enjoy this`
-* [HTML]((6)html.md)
-  * `Structuring the web`
-* [CSS]((7)css.md)
-  * `.thumbs { vertical-align: top; }`
-* [Browser API]((8)browserapi.md)
-  * `Protect and serve`
-* [Node.js]((9)nodejs.md)
-  * `Node node node`
-* [Building a Node.js site with Express]((10)buildingsite.md)
-  * `Express yourself`
-* [MongoDB & Mongoose]((11)mongodb.md)
-  * `This franchise has NoSQL`
+## 🚩 Trail lesson 0 (1 hour)
+
+* [📚 Introduction of this course]((0.0)intro6(45).md)
+* [👷 Workshop: our first web page]((0.1)👷Workshop_How_webpage_works1(20).md)
+
+## 🚩 Lesson 1 (45 min)
+
+* [📚 Install node.js]((1.1)Install_node1-2(15).md)
+* [📚 JavaScript data types]((1.2)JavaScript_data_type_a2(30).md)
+
+ [test] { (1.2)JavaScript_data_type_a2(30).md | (1.2)JavaScript_data_type_a2(30).html }}

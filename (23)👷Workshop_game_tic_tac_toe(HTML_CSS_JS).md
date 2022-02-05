@@ -43,7 +43,9 @@
 </html>
 ```
 
-```css
+ttt-style.css
+```css  
+
 .wrapper {
     display: grid;
     grid-template-columns:repeat(3,1fr);
@@ -56,7 +58,7 @@
 
 .cell{
     text-align: center;
-    background: rgb(23, 179, 226);
+    background: rgb(23, 179, 226); 
 }
 ```
 

@@ -1,0 +1,9 @@
+markdown: GFM
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - (0.0)intro6(45).md

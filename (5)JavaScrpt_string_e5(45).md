@@ -72,7 +72,7 @@
   **Example:**
 
   ```js
-  let text = "Java"; // Sometimes we don't want that trailing space ;)
+  const text = "Java"; // Sometimes we don't want that trailing space ;)
 
   console.log(text.concat("Script", " is the best", " Programming language!!"));
   ```
@@ -234,8 +234,8 @@
   **Example:**
 
   ```js
-  let friends = "tute, mati, pepe, raul, juan, marta, agus, loli";
-  let friendsArray = friends.split(",");
+  const friends = "tute, mati, pepe, raul, juan, marta, agus, loli";
+  const friendsArray = friends.split(",");
 
   console.log(friendsArray);
   /* 
