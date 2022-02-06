@@ -107,7 +107,7 @@ function userInput() {
 }
 
 function setBoardX(index) {
-  // This is a dummy AI   
+  // This is a Smart AI!
   if (board[index] == emptyCell) {
     board[index] = " x ";
     return;

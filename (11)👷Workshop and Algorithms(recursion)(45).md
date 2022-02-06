@@ -15,8 +15,7 @@
   function showNumber(number) {
     if (number <= 10) {
       console.log(number);
-      number = number +1;
-      // number++;
+      number = number +1; // number++;
       showNumber(number);
     }
   }
