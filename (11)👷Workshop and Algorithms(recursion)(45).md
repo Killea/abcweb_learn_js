@@ -57,3 +57,6 @@ function jc( val)
 
 console.log(jc(400))
 ```
+
+Try to run this program in your browser and see what happens!
+Question: How do we do that?
