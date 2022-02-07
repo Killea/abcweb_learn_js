@@ -4,9 +4,16 @@
 
 We almost on our half way of the class, so it would be better to review some of the code and the lessons.
 
+## run code in a browser and node 
+Try to run code in node and browsers
+
+
+## different browsers
+To understand there are different browsers, different cores
+
 ## Get the sum of  1, 2, 3 ...... 100
 
-There might be a lot ways to solve this problem.
+There might be a lot of ways to solve this problem.
 ### Math Way
 
 (1+ 100)* 50 = 5050
