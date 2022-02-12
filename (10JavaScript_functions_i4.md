@@ -29,7 +29,7 @@
 
 #### Practice
 
-[Exercise 100](./exercises/js/ex_100.md) 🕙 (you could check your index68.js)
+[Exercise 100](./exercises/js/ex_100.md)  (you could check your index68.js)
 
 [Exercise 101](./exercises/js/ex_101.md)
 
@@ -153,7 +153,7 @@
 
 #### Practice
 
-[Exercise 105](./exercises/js/ex_105.md)🕙
+[Exercise 105](./exercises/js/ex_105.md)🕙 (meaning of life return 42)
 
 [Exercise 106](./exercises/js/ex_106.md)
 
