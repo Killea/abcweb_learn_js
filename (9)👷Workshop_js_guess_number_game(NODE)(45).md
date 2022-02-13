@@ -49,7 +49,7 @@ These are libraries built by the **awesome** community which will solve most of 
 // npm install prompt-sync
 const terminal = require('prompt-sync')();
 
-const randomNumber = Math.round(Math.random() * 10);  // generate a random number between 0 and 10
+const randomNumber = Math.round(Math.random() * 11);  // generate a random number between 0 and 10, less than 11
 let lives = 5;
 
 while (true) {
