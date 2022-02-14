@@ -29,7 +29,7 @@ console.log(sum);
 🎮Also, In this lesson, we will try to develop a simple game and review ```loop``` and ```if condition```.
 
 
-try create a folder, such as ```guess_number_game```
+try create a folder, such as ```guess_number_game```  or ```gn```
 
 then go to this folder to open vs code.
 
@@ -45,11 +45,11 @@ These are libraries built by the **awesome** community which will solve most of 
 
 
 ```js
-// workshop9.js
+// workshop9.js or gn.js
 // npm install prompt-sync
-const terminal = require("prompt-sync");
+const terminal = require('prompt-sync')();
 
-const randomNumber = Math.round(Math.random() * 10);
+const randomNumber = Math.round(Math.random() * 11);  // generate a random number between 0 and 10, less than 11
 let lives = 5;
 
 while (true) {

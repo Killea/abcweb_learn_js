@@ -2,6 +2,7 @@
 
 [<- Home](README.md)
 
+ℹ️Review last class' exercise
 ### Recursion 🕙
 
 - Recursion is an act of a function calling itself

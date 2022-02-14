@@ -5,7 +5,6 @@ const prompt = require("prompt-sync")();
 // get input from the user.
 //
 
-// const turn = prompt('Your turn, please type a number (1-9):');
 const emptyCell = "   ";
 const vLine = " | ";
 const hLine = "-";
