@@ -5,6 +5,7 @@
 ℹ️Review last class' exercise
 
 (1) Be careful about the logic of the **if/else if**
+
 (2) Try to reduce repetition
   You could try to use multiple functions.
 
