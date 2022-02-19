@@ -9,7 +9,22 @@
 (2) Try to reduce repetition
   You could try to use multiple functions.
 
-
+  
+```js
+function validateUser(username, password) {
+  if (
+    (username == "nacho" && password == "Nerd1979") ||
+    (username == "pedro" && password == "Batman2017") ||
+    (username == "marta" && password == "mother2312")
+  ) {
+    console.log("Welcome " + username + " , nice to see you again");
+    return;
+  } 
+  console.log("Please enter valid credidentals");
+}
+validateUser("a", "Nerd1979");
+validateUser("nacho", "Nerd1979");
+```
 
 ### Recursion 🕙
 
