@@ -72,7 +72,7 @@ Examples:
 function fa( val)
 {
 
-    if (val === 0)
+    if (val === 0 || val == 1)
     {
         return BigInt(1);
     }
@@ -82,5 +82,6 @@ function fa( val)
 console.log(fa(400))
 ```
 
-Try to run this program in your browser and see what happens!
-Question: How do we do that?
+
+
+ℹ️Read this article about factorial-in-javascript [article](https://www.geeksforgeeks.org/factorial-in-javascript/)
