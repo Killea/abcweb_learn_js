@@ -3,6 +3,13 @@
 [<- Home](README.md)
 
 ℹ️Review last class' exercise
+
+(1) Be careful about the logic of the **if/else if**
+(2) Try to reduce repetition
+  You could try to use multiple functions.
+
+
+
 ### Recursion 🕙
 
 - Recursion is an act of a function calling itself
@@ -46,17 +53,17 @@ Examples:
 
 ```
 
-function jc( val)
+function fa( val)
 {
 
     if (val === 0)
     {
         return BigInt(1);
     }
-    return BigInt(val)* jc(val-1);
+    return BigInt(val)* fa(val-1);
 }
 
-console.log(jc(400))
+console.log(fa(400))
 ```
 
 Try to run this program in your browser and see what happens!
