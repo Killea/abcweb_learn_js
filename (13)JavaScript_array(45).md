@@ -1,10 +1,12 @@
 # JavaScript part J (Array)
 
 [<- Home](README.md)
-#### Array 
+#### Array <sup>/əˈreɪ/</sup>
+(Push, pop,sort,reverse,join)
 
-- An **array** literal is a list of zero or more expressions
-- Each value represents an array element
+- An **array** literal is a list of items, such as string,number,boolean,object, function, array, null, undefined, symbol,etc. almost anything in JavaScript.
+
+- Each value represents an array **element**
 - The values are closed in square brackets **[]**
 - Creating an array using an array literal, it's initialized with the specified values as its elements, and its length is set to the number of arguments specified
 - This type of value allows us to store more than one value into a variable
@@ -211,7 +213,9 @@
 
 #### Practice
 
-[Exercise 120](./exercises/js/ex_120.md)  (you could try to use ```for``` loop)
+[Exercise 120](./exercises/js/ex_120.md)  
+(you could try to use ```for``` loop) 
+**Any volunteer to share your screen? I can give you some hints at the same time.**
 
 [Exercise 121](./exercises/js/ex_121.md)
 
@@ -477,3 +481,6 @@
   ```
 
 - We can choose any string to join array items
+
+
+### ⚠️Please spend some time to practice the concepts you've learned so far about arrays. You should try all the methods mentioned above, **Push, pop,sort,reverse,join**. You could define an array yourself and try to use all the methods we have learned today.
