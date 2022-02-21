@@ -61,6 +61,7 @@ Look at this picture:
 ## Basic HTML Tags
 https://www.w3schools.com/tags/ref_byfunc.asp
 
+```HTML
 <!DOCTYPE> 	Defines the document type
 <html>	Defines an HTML document
 <head>	Contains metadata/information for the document
@@ -71,3 +72,10 @@ https://www.w3schools.com/tags/ref_byfunc.asp
 <br>	Inserts a single line break
 <hr>	Defines a thematic change in the content
 <!--...-->	Defines a comment
+<input>	Defines an input control
+<textarea>	Defines a multiline input control (text area)
+<button>	Defines a clickable button
+<select>	Defines a drop-down list
+<option>	Defines an option in a drop-down list
+<label>	Defines a label for an <input> element
+```
