@@ -1,764 +1,987 @@
-# HTML part b
+# CSS - Cascade Style Sheet
 
 [<- Home](README.md)
 
-### Inputs
-* The **input** element is used to create interactive controls for web-based forms in order to accept data from the user
-* How it works varies considerably depending on the value of its `type attribute`
-* If this attributes is not specified, the `default` type adopted is `text`
-* The available types are as follows: button, checkbox, color, date, datetime-local, email, file, hidden, image, month, number, password, range, reset, search, submit, tel, text, time, url, week
-* [MDN input doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+## Intro to CSS 🕙
 
-**Example:**
-```html
-<form>
-  <input type="input-type" name="variable-name" >
-</form>
-```
+* **CSS** stands for **C**ascading **S**tyle **S**heets and it's a language used to describe the presentation of a document written in HTML
+* CSS describes how elements should be rendered on screen, on paper, in speech, or on other media types
 
-#### Text
-* Create basic single-line text fields (name, lastname, username, address)
-* Use the type value of `text` to define this type of input
-* You must remember to include name attribute on the **input** element, otherwise the text field's value won't be included with the submitted data
-* [MDN input type text doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text)
+  **CSS code example:**
+  ```CSS
+  span {
+    color: white;
+  }
+  ```
 
-**Example:**
-```html
-<form>
-  <input type="text" name="username" >
-</form>
-```
+* In this example we define that all span elements will show white text
+* Using this code we can see that with CSS we'll select one or many elements & set some property and value to update the way the element should look
 
-* The `value` attribute contains the value of the text input
-* The user will see any predefined value
-* To clear the input the user will have to manually delete the input content
+  **CSS code example:**
+  ```CSS
+  element_selector {
+    property_name: property_value;
+  }
+  ```
 
-**Example:**
-```html
-<input type="text" name="username" value="harryp" >
-```
+* By working with CSS we'll be selecting elements and defining how they should look
+* We can also define if the style should be applied at the element, document or site level
+* [Chrome Devtools](https://developers.google.com/web/tools/chrome-devtools) is a great tool to use when coding CSS and JavaScript
+* [Read the MDN CSS reference guide](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 
-* The `placeholder` attribute is typically rendered in a lighter color than the element's foreground color, and automatically vanishes when the user begins to enter text into the field
+## Element Type selectors
+* The **type selector** matches elements by node name
+* It selects **all** elements of the given type within a document
+* Between **{ }** goes CSS code
+* [MDN type selecto doc](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors)
 
-**Example:**
-```html
-<input type="text" name="username" placeholder="Please input a username" >
-```
+  **Selector Example**
+  ```css
+  /* This selector selects all p elements */
+  p {
+    /* CSS Code */
+  }
 
-* The **size** attribute specified the number of characters the text input can display at a time
-* This affects the width of the element, letting you specify the width in terms of characters rather than pixels
-* As it's only a visual effect we can update it with CSS
+  /* This selector selects all div elements */
+  div {
+    /* CSS Code */
+  }
 
-**Example:**
-```html
-<input type="text" name="username" value="harryp" size="20" >
-```
+  /* This selector selects all span elements */
+  span {
+    /* CSS Code */
+  }
+  ```
 
-* You can specify a minimum length (in characters) for the entered value using the `minlength` attribute
-* Similarly, use `maxlength` to set the maximum length of the entered value, in characters
+### Color 🕙
+* The **color** CSS property sets the foreground color value of an element's text content and text decorations
+* This property accepts any CSS color value:
+  * Named color: white, red, blue, green
+  * RGB (Red, Green & Blue): rgb(0,0,0)
+  * Hexadecimal color: #000000, #ffffff
+* [MDN color property](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+* [Wikipedia RGB doc](https://en.wikipedia.org/wiki/RGB_color_model)
+* [To learn more about color models](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+* [Hexadecimal system](https://en.wikipedia.org/wiki/Hexadecimal)
 
-**Example:**
-```html
-<input type="text" name="username" value="harryp" minlength="3" maxlength="20">
-```
+  **Example:**
+  ```css
+    /* All p elements are blue */
+    p {
+      color: blue;
+    }
 
-* If you try to submit the form with less than 4 characters, you'll be given an appropriate error message (which differs between browsers). 
-* If you try to enter more than 8 characters, the browser won't let you.
-* If you specify a `minlength` but do not specify `required`, the input is considered valid, since the user is not required to specify a value
+    /* All div elements are red */
+    div {
+      color: rgb(255, 0, 0);
+    }
 
-#### Password
-* The input type passowrd provide a way for the user to securely enter a password 
-* The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("*") or a dot ("•")
-* Set the type attribute to password
-* We can use the **name**, **value**, **size**, **minlength** & **maxlength** attributes
-* Remember that this hidden text is just a visual effect
-* Use HTTPS to send client data to the server
-* [MDN input type password doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password)
+    /* All span elements are green */
+    span {
+      color: #00FF00;
+    }
+  ```
 
-**Example:**
-```html
-<form>
-  <input type="password" name="pass" >
-</form>
-```
+  ```html
+  <p>Blue text</p>
+  <p>Blue &amp; <span>green</span> text</p> 
+  <div>Red text</div>
+  <div>Red &amp; <span>green</span> text</div>
+  <span>Green text</span>
+  ```
 
-#### Submit button
-* The input type `submit` is just a button that submits the form
-* This type of element's value attribute contains the button's label
-* If you don't specify a value, the button will have a default label, chosen by the user agent
-* [MDN input submit doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit)
+## How to apply CSS to a document
+* The **style** element contains style information for a document, or part of a document
+* By default, the style instructions written inside that element are expected to be CSS
+* The **type** attribute is optional and defaults to **text/css** if it is missing
+* [MDN style element doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style)
 
-**Example:**
-```html
-<form>
-  <input type="submit" value="Submit this form">
-</form>
-```
+  **Example:**
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Using CSS in a Document</title>
+      <style type="text/css">
+        /* We select all the document span elements and apply the color property with a white value */
+        span {
+          color: white;
+        }
+      </style>
+    </head>
+    <body>
+      <span>White text</span>
+      <span>White text</span>
+      <span>White text</span>
+    </body>
+  </html>
+  ```
 
-#### Practice
-[Exercise 11](exercises/html/ex_11.md)
+* We can make our document different by only changing the color value
 
-### Labels
-* The **label** element represents a caption for an item in a user interface
-* A **label** can be associated with a control either by placing the control element inside the **label** element, or by using the for attribute
-* Such a control is called the labeled control of the label element
-* One input can be associated with multiple labels
-* [MDN label doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
-
-**Example:**
-```html
-<form>
-  <label>Name:</label>
-  <input type="text" name="name" />
-  <label>Surname:</label>
-  <input type="text" name="surname" />
-</form>
-```
-
-* Also we could use it this way:
-
-**Example:**
-```html
-<form>
-  <label>
-    Name:
-    <input type="text" name="name" />
-  </label>
-  <label>
-    Surname:
-    <input type="text" name="surname" />
-  </label>
-</form>
-```
-
-* The label element has a **for** attribute
-* Once we set the **for** attribute, the user will be able to click on the **label** element to get focus in the set **for** value
-* The id of a label form-related element in the same document as the label element.
-* The first such element in the document with an ID matching the value of the for attribute is the labeled control for this label element
-
-**Example:**
-```html
-<form>
-  <label for="nameid">Name:</label>
-  <input type="text" name="name" id="nameid" />
-  <label for="surnameid">Surname:</label>
-  <input type="text" name="surname" id="surnameid" />
-</form>
-```
-
-### Fieldset
-* The **fieldset** element is used to group several controls as well as labels within a web form
-* [MDN fieldset doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
-
-**Example**
-```html
-<form>
-  <fieldset>
-    <label>Name:</label>
-    <input type="text" name="name" />
-    <label>Surname:</label>
-    <input type="text" name="surname" />
-  </fieldset>
-</form>
-```
-
-* The **legend** element represents a caption for the content of its parent **fieldset**
-
-**Example**
-```html
-<form>
-  <fieldset>
-    <legend>User Form</legend>
-    <label>Name:</label>
-    <input type="text" name="name" />
-    <label>Surname:</label>
-    <input type="text" name="surname" />
-  </fieldset>
-</form>
-```
-
-#### Radio buttons
-* The `input type radio` elements are generally used in radio groups—collections of radio buttons describing a set of related options
-* Only one radio button in a given group can be selected at the same time
-* Radio buttons are typically rendered as small circles, which are filled or highlighted when selected
-* To define a radio group each of the radio buttons in the group must have same name attribute
-* The user will see a legend next to each radio button by using a label element or just plain text
-* [MDN input type radio doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio)
-
-**Example**
-```html
-<form>
-  Are you a Riders Fan?
-  <input type="radio" name="ridersfan" value="true"> Oh Yeahhhhhh, Go Riders!!!
-  <input type="radio" name="ridersfan" value="false"> No
-</form>
-```
-
-* Use the `checked` attribute with a `checked` value to select the default selected value
-* In HTML5 when the attribute name and value is the same we can just add the attribute `checked`
-
-**Example**
-```html
-<form>
-  Are you a Riders Fan?
-  <input type="radio" name="ridersfan" value="true" checked="checked"> Oh Yeahhhhhh, Go Riders!!!
-  <input type="radio" name="ridersfan" value="false"> No
-  <!-- <input type="radio" name="ridersfan" value="true" checked> Oh Yeahhhhhh, Go Riders!!! -->
-</form>
-```
-
-#### Checkboxes
-* The input elements of `type checkbox` are rendered by default as square boxes that are checked (ticked) when activated
-* They allow you to select single values for submission in a form (or not).
-* Radio buttons are similar to checkboxes, but with an important distinction:
-> radio buttons are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
-* To select multiple values we need to use the same name input
-* Use the value attribute to set each input selected value
-* The checked attribute and value works the same way as radio buttons
-* [MDN input type checkbox doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
-
-**Example**
-```html
-<form>
-  Select your favourite Harry Potter wizards
-  <input type="checkbox" name="wizards" value="harry potter" checked="checked" > Harry Potter
-  <input type="checkbox" name="wizards" value="hermione granger" checked> Hermione Granger
-  <input type="checkbox" name="wizards" value="ron weasley"> Ron Weasley
-  <input type="checkbox" name="wizards" value="aberforth dumbledore"> Aberforth Dumbledore
-</form>
-```
-
-### Hidden
-* The input elements of `type hidden` let web developers include data that cannot be seen or modified by users when a form is submitted
-* A good example: the ID of the content that is currently being ordered or edited, or a unique security token 
-* Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content
-* A user will be able to see them on the source code
-
-**Example:**
-```html
-<form>
-  <input type="hidden" name="product-id" value="1" >
-</form>
-```
-
-#### Image buttons
-* The input elements of `type image` are used to create graphical submit buttons
-* We can use a button image instead of the default submit one
-* To define the image we use the **src** attribute (as the image element)
-* [MDN input type image doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image)
-
-**Example:**
-```html
-<form>
-  <input type="image" src="create_user_button.png" >
-</form>
-```
-
-* To change the image size we can use the **height** & **width** attributes
-* We'll use CSS to change the way elements have to look (friendly reminder)
+  **Example:**
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Using CSS in a Document</title>
+      <style type="text/css">
+        /* We select all the document span elements and apply the color property with a red value */
+        span {
+          color: red;
+        }
+      </style>
+    </head>
+    <body>
+      <span>Red text</span>
+      <span>Red text</span>
+      <span>Red text</span>
+    </body>
+  </html>
+  ```
 
 #### Practice
-[Exercise 12](exercises/html/ex_12.md)
+[Exercise 1](exercises/css/ex_1.md) 👈set colors in css
 
-### Text area
-* The **textarea** element represents a multi-line plain-text editing control
-* This element has an opening and close tag
-* [MDN input textarea doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea)
+## CSS Styles 
 
-**Example**
-```html
-<textarea name="about">Rick Sanchez it's a great scientific..</textarea>
-```
+* W can apply css in different ways:
+  * Document
+  * Inline style
+  * Site
 
-* Use the **placeholder** attribute to let the user know what to input
+### Inline style 🕙
+* We can use the **style** attribute to apply css to only one HTML element
+* This attribute accepts a pair of property:value
+* To apply more than one style we separate the property:value with a semicolon
+  * Example: property:value; other-property: other-value
+* We don't need to select the element as we are directly applying the style to it
 
-**Example**
-```html
-<textarea name="about" placeholder="Please let us know about yourself"></textarea>
-```
+  **Example:**
+  ```html
+  <span style="color: white;">White text</span>
+  ```
 
-* The **cols** attribute sets the textarea amount of columns
-* The **rows** attribute sets the textarea amount of lines
+* This is the most singular way to apply CSS to HTML.  The style will apply only to the single element.
+* You would need to apply the style attribute to each element if you want more than one element with the same style
 
-**Example**
-```html
-<textarea name="about" cols="10" rows="2" >Initial textarea text!</textarea>
-```
+  **Example:**
+  ```html
+  <span style="color: white;">White text</span>
+  <span style="color: white;">Other white text</span>
+  ```
 
-### Select
-* The **select** element represents a control that provides a menu of options
-* The **option** element is used to define an item contained in a **select** element
-* As such, **option** can represent menu items in popups and other lists of items in an HTML document
-* [MDN input select doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
-* [MDN input option doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
-
-**Example**
-```html
-<form>
-  <select name="options">
-    <option>First Item</option>
-    <option>Second Item</option>
-  </select>
-</form>
-```
-
-* The **option** element uses a **value** attribute to define the value the user selects
-* Also we can show the user a different text as an **option** content
-
-**Example**
-```html
-<form>
-  <select name="countries">
-    <option value="">Please select a Country</option>
-    <option value="arg">Argentina</option>
-    <option value="bra">Brasil</option>
-    <option value="chl">Chile</option>
-    <option value="can">Canada</option>
-  </select>
-</form>
-```
-
-* We can use the **selected** attribute to select the default selected value
-* This attribute uses the **selected** value and is the same attribute name we can just use the attribute name without a value (example: selected="selected")
-* By default the first option is going to be selected
-
-**Example**
-```html
-<form>
-  <select name="countries">
-    <option value="">Please select a Country</option>
-    <option value="arg">Argentina</option>
-    <option value="bra">Brasil</option>
-    <option value="chl">Chile</option>
-    <option value="can" selected="selected">Canada</option>
-  </select>
-</form>
-
-OR
-
-<form>
-  <select name="countries">
-    <option value="">Please select a Country</option>
-    <option value="arg">Argentina</option>
-    <option value="bra">Brasil</option>
-    <option value="chl">Chile</option>
-    <option value="can" selected>Canada</option>
-  </select>
-</form>
-```
-
-* The **multiple** attribute will allow the user to select multiple options
-* The **size** attribute configures the number o items we'll show at the same time
-* To select many items we'll use the control key
-
-**Example**
-```html
-<form>
-  <select name="countries" multiple="multiple" size="4">
-    <option value="">Please select a Country</option>
-    <option value="arg">Argentina</option>
-    <option value="bra">Brasil</option>
-    <option value="chl">Chile</option>
-    <option value="can" selected>Canada</option>
-  </select>
-</form>
-```
-
-### Buttons
-* The **button** element represents a clickable button, which can be used in forms, or anywhere in a document that needs simple, standard button functionality
-* To set the button content we need to use an opening and close tags
-* Add the **value** attribute if you need to submit this element value
-* [MDN button doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
-
-**Example**
-```html
-<form>
-  <button value="create" name="create-user">+ User</button>
-</form>
-```
-
-* We can add any html content like an image
-
-**Example**
-```html
-<form>
-  <button>
-    <img src="plus-icon.png" alt="plus icon" />
-    User
-  </button>
-</form>
-```
-
-#### File 
-* The **file** input type is a control that lets the user select a file
-* Use the accept attribute to define the types of files that the control can select
-* As we're going to be submitting more than just text we need to change the form enctype to enctype="multipart/form-data" and use the post method
-* By default we can only select one file
-* Use the **multiple** attribute indicates whether the user can enter more than one value (only HTML5 and all browsers might not support it)
-* [MDN input type file doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)
-
-**Example**
-```html
-<form action="upload.php" method="post" enctype="multipart/form-data">
-  <input type="file" name="filename" />
-  <input type="file" name="filename" multiple="multiple" />
-  <input type="file" name="filename" multiple />
-</form>
-```
+* This type of selection is usefull if we only need a couple of elements
+* It's hard to change values if we have many items
+* As it's the last property that the browser reads, it's also the [higher priority one](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+* Because it is the last property read, it's a good option when you need to override styles
 
 #### Practice
-[Exercise 13](exercises/html/ex_13.md)
+[Exercise 2](exercises/css/ex_2.md)
 
-#### New HTML5 input types
-* HTML5 adds some new specific inputs
-* If the browser doesn't support them it will show an input type text element
-* [HTML5 forms input types](http://html5doctor.com/html5-forms-input-types/)
-* [See them in action](https://robertnyman.com/html5/forms/input-types.html)
+### Site styles 🕙
+* The **link** element links a HTML document with a CSS one
+* The CSS rules that we define in a external CSS file are going to apply for each document that we link
+* This is the best way to apply CSS to our sites if we have many documents and we want them to share the same look & feel
+* The link tag has the following attributes:
+  * **href:** define the document path that you want to link
+  * **type:** as we are linking CSS we use the value "text/css"
+  * **rel:** as we are linking CSS we use the value "stylesheet"
 
-##### Date
-* The input `type date` is a control for entering a date (year, month, and day, with no time)
-* We can set a initial value using the **value** attribute
-* [MDN input type date doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date)
+  **Example:** 
 
-**Example**
-```html
-<form>
-  <input type="date" name="birthday" />
-  <input id="date" type="date" value="1980-04-02">
-</form>
-```
+  filename: styles.css
+  ```css
+  span {
+    color: white;
+  }
+  ```
 
-##### Email
-* The input `type email` is a field for editing an e-mail address
-* [MDN input type email doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/email)
+  filename: index.html
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Index</title>
+      <!-- 
+        We link the index.html file with the styles.css one
+      -->
+      <link href="styles.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+      <span>white text</span>
+      <span>white text</span>
+      <span>white text</span>
+      <span>white text</span>
+      <span>white text</span>
+    </body>
+  </html>
+  ```
 
-**Example**
-```html
-<form>
-  <input type="email" name="email" />
-</form>
-```
+  filename: contact.html
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Contact</title>
+      <!-- 
+        If we have more than one document we can link the same style sheet
+        Every rule defined on the external CSS file works here
+      -->
+      <link href="styles.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+      <span>Other white text</span>
+      <span>Other white text</span>
+      <span>Other white text</span>
+      <span>Other white text</span>
+      <span>Other white text</span>
+    </body>
+  </html>
+  ```
 
-##### URL
-* The input `type url` is a field for entering a URL
-* [MDN input type url doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/url)
+* We can change the way spans look in both documents by only changing one CSS value
 
-**Example**
-```html
-<form>
-  <input type="url" name="personalsite" />
-</form>
-```
+  **Example:** 
+  filename: styles.css
+  ```css
+  span {
+    color: red;
+  }
+  ```
 
-##### Search
-* The input `type search` is a single-line text field for entering search strings
-* Line-breaks are automatically removed from the input value
+  filename: index.html
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Index</title>
+      <link href="styles.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+      <span>Red Text</span>
+      <span>Red Text</span>
+      <span>Red Text</span>
+      <span>Red Text</span>
+      <span>Red Text</span>
+    </body>
+  </html>
+  ```
 
-**Example**
-```html
-<form>
-  <input type="search" name="query" />
-</form>
-```
-
-#### Practice
-[Exercise 14](exercises/html/ex_14.md)
-
-
-### Form validation
-* To make sure that the data users fill out in forms is in the correct format we need to process the form inputs
-* We can validate on client and server side
-* We'll use some HTML elements attribute to validate our forms on the client side
-* If we validate on the client side we avoid sending wrong data to the server so we have many requests
-* HTML5 added element validations
-* Also we can use JavaScript to validate our inputs too
-
-#### Required
-* The **required** attribute specifies that the user must fill in a value before submitting a form
-* As it's a boolean attribute we can just write the attribute name without any value (required="required" or just required)
-* The form won't submit until all required inputs are completed
-
-**Example**
-```html
-<form>
-  <input type="text" name="name" required />
-  <input type="text" name="name" required="required" />
-</form>
-```
-
-#### Regex
-* A regular expressions is a pattern used to match character combinations in strings
-* We can use them in many different languages
-* The attribute **pattern** allows us to enter a valid regex as value
-* This regular expression will be executed with the input value to see if it match
-* The pattern must match the entire value
-* This attribute applies when the value of the type attribute is text, search, tel, url, email, or password, otherwise it is ignored
-* The regular expression language is the same as JavaScript RegExp algorithm
-* The pattern is not surrounded by forward slashes
-* It's a good practice to add the **title** attribute to explain the allowed values
-* Add the placeholder if you use this attribute or it might not show the title content
-* [Wikipedia - Regular_expression](https://en.wikipedia.org/wiki/Regular_expression)
-* [Nice regex tutorial](https://regexone.com)
-
-**Example**
-```html
-<form>
-  <input type="text" name="name" pattern="^[a-zA-Z]+$" placeholder="name" title="Input only letters" /> 
-  <input type="text" name="age" pattern="\d+" placeholder="age" title="Input only numbers" />
-  <input type="submit" value="Submit">
-</form>
-```
-
-* Use [caniuse.com](http://caniuse.com/#search=required) to find out if a feature is compatible with the browser you're targeting
-* To know more about this subject you can read the [MDN form validation guide](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation)
-
-## HTML5 new sections
-*  HTML5 specification brings several new elements to web developers allowing them to describe the structure of a web document with standard semantics
-* All content lying inside the **body** element is part of a section
-* Sections in HTML5 can be nested
-* Each section can have its own heading hierarchy. Therefore, even a nested section can have an **h1**
-* HTML5 adds the following features:
-  * Semantics: allowing you to describe more precisely what your content is
-  * Connectivity: allowing you to communicate with the server in new and innovative ways
-  * Offline and storage: allowing webpages to store data on the client-side locally and operate offline more efficiently
-  * Multimedia: making video and audio first-class citizens in the Open Web
-  * 2D/3D graphics  and effects: allowing a much more diverse range of presentation options
-  * Performance and integration: providing greater speed optimization and better usage of computer hardware
-  * Device access: allowing for the usage of various input and output devices
-  * Styling: letting authors write more sophisticated themes
-* [MDN HTML5 guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
-
-* In the semantics section we find new outlining and sectioning elements like **section**, **article**, **nav**, **header**, **footer** and **aside**. 
-
-* The **header** element represents introductory content, typically a group of introductory or navigational aids
-* It may contain some heading elements but also other elements like a logo, a search form, an author name, and so on
-* The **nav** element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents
-* The **aside** element represents a portion of a document whose content is only indirectly related to the document's main content
-* The **section** element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document
-* The **footer** element represents a footer for its nearest sectioning content or sectioning root element
-* A footer typically contains information about the author of the section, copyright data or links to related documents
-
-**Example**
-```html
-<body>
-  <header>
-    <h1>Title of our document</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="bio.html">Bio</a></li>
-    </ul>
-  </nav>
-  <aside>
-    <p>Aside Content</p>
-  </aside>
-  <section>
-    <h1>Section Main Title</h1>
-    <p>Section Content</p>
-  </section>
-  <footer>
-    <p>Site Footer</p>
-  </footer>
-</body>
-```
-
-* The *article element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable. Examples include: a forum post, a magazine or newspaper article, or a blog entry
-* The **address** element indicates that the enclosed HTML provides contact information for a person or people, or for an organization
-* The HTML **time** element represents one of the following: a time on a 24-hour clock or a precise date in the Gregorian calendar
-
-**Example**
-```html
-<body>
-  <article>
-    <p>Author Name</p>
-    <time>02/02/2017</time>
-    <address>
-      136 Market Av.
-    </address>
-  </article>
-</body>
-```
-
-## Iframe
-* The **iframe** element represents a nested browsing context, effectively embedding another HTML page into the current page
-* The **src** attribute accepts the URL of the page to embed as value
-* Use the **height** & **width** attributes to set the iframe size
-* The **seamless** is a boolean attribute indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document
-* The **frameborder** attribute tells the browser to draw a border between this frame. If we set the value to 0 tells the browser not to draw a border between this frame
-* [MDN iframe doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe)
-
-**Example**
-```html
-<body>
-  <iframe src="other_document.html" height="200" width="200" seamless frameborder="0"></iframe>
-</body>
-```
+  filename: contact.html
+  ```html
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Contact</title>
+      <link href="styles.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+      <span>Other Red Text</span>
+      <span>Other Red Text</span>
+      <span>Other Red Text</span>
+      <span>Other Red Text</span>
+      <span>Other Red Text</span>
+    </body>
+  </html>
+  ```
 
 #### Practice
-[Exercise 15](exercises/html/ex_15.md)
+[Exercise 3](exercises/css/ex_3.md)  (Optional, we have did something like this before)
 
-## Video
-* The **video** element embeds a media player which supports video playback into the document
-* This element contains one or more video sources
-* To specify a video source, use either the **src** attribute or the **source** element (the browser will choose the most suitable one)
-* Different browsers might support different media types
-  * H264: Internet Explorer & Safari
-  * WebM: Android, Chrome, Firefox and Opera
-* For a list of supported formats you can see the [MDN supported media formats guide](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats)
-* Each browser will show the player in a different way
-* Also we can still use flash plugin to reach more users
-* This are some of the attributes that we can use to configure the video element
-  * **src:** set this value with the video filename or path
-  * **width:** & **height:** to set the video player size
-  * **poster:** we can set a picture file or path that will show while the video is downloaded
-* [MDN video doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video)
+## CSS Selectors
+* To use CSS on our site we need more ways to select elements and apply styles
+* By using different types of selector we can select one or many elements at the same time
+* For example: 
+  * The element selector (tag name) applies the style to all the elements with the same tag name
+  * The id selector applies the style to only the element that has the id attribute
+* [Read the MDN selectors guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors)
 
-**Example**
-```html
-<body>
-  <video src="myvideo.mp4" poster="myvideo.jpg" width="600" height="400">
-    <p>Video description</p>
-  </video>
-</body>
-```
+## ID Selector 🕙
+* To select elements by id we use the **#** character and the element id value
+* [MDN ID selectors doc](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors)
 
-* The video element has many attributes that works as a boolean value to turn on/off the different features
-  * **controls:** if this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback
-  * **autoplay:** if specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data
-  * **loop:** upon reaching the end of the video the player automatically seek back to the start
-  * **preload:** This enumerated attribute is intended to provide a hint to the browser about what the author thinks will lead to the best user experience.
-    * It may have one of the following values:
-      * **none:** indicates that the video should not be preloaded
-      * **auto:** indicates that the whole video file could be downloaded, even if the user is not expected to use it
-      * **metadata:** indicates that only video metadata (e.g. length) is fetched
-      * **An empty string**: synonym of the auto values
+  **Example:** 
+  ```css
+  /* Element with id="main" */
+  #main {
+    color: red;
+  }
 
-**Example**
-```html
-<body>
-  <video 
-    src="myvideo.mp4" 
-    poster="myvideo.jpg"
-    width="600" 
-    height="400"
-    controls
-  >
-    <p>Video Description</p>
-  </video>
-</body>
-```
+  div {
+    color: blue;
+  }
+  ```
 
-## Audio
-* The **audio** element is used to embed sound content in documents
-* It may contain one or more audio sources, represented using the src attribute or the **source** element: the browser will choose the most suitable one 
-* It can also be the destination for streamed media, using a MediaStream
-* This element works in a similar way as the **video** one
-* The **audio** element supports the same attribute video does: **src**, **controls**, **autoplay**, **preload** & **loop**
-* Some browsers have better support for some media types:
-  * **MP3:** Safari 5+, Chrome 6+ e IE9
-  * **Ogg Vorbis:** Firefox 3.6, Chrome 6, Opera 1.5 e IE9
-* Also if the browser doesn't support this tag it will render the element content (like the paragraph in the example)
-* [MDN audio doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
-* [MDN media stream doc](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream)
+  ```html
+  <div id="main">Red Main Div</div>
+  <div>Blue div</div>
+  <div>Blue div</div>
+  ```
 
-**Example**
-```html
-<body>
-  <audio src="ejemplo-audio.ogg" autoplay controls>
-    <p>Audio description.</p>
-  </audio>
-</body>
-```
+## Class Selector 🕙
+* Also we can select all elements with same class name by using a **.** and the element class name
+* [MDN Class selectors doc](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors)
 
-### Source
-* The **source** element specifies multiple media resources for the **picture**, **audio** and **video** elements
-* It is an empty element
-* It is commonly used to serve the same media content in multiple formats supported by different browsers 
-* If we use this element we don't have to use the **src** attribute
-* This element supports the following attributes:
-  * **src:** required for **audio** and **video**, address of the media resource
-    * The value of this attribute is ignored when the **source** element is placed inside a **picture** element
-  * **type:** the MIME-type of the resource, optionally with a codecs parameter
-    * See [RFC 4281 guide](https://tools.ietf.org/html/rfc4281) for information about how to specify codecs
-* [MDN source doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
-* [MDN picture doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
+  **Example:** 
+  ```css
+  /* All elements that have class="red" */
+  .red {
+    color: red;
+  }
 
-**Example**
-```html
-<body>
-  <video poster="myvideo.jpg" controls>
-    <source src="myvideoo.mp4" type="video/mp4">
-    <source src="myvideo.webm" type="video/webm"> 
-    <source src="myvideo.ogv" type="video/ogg"> 
-    <source src="myvideo.3gp" type="video/3gp">
-    <p>Vide description</p>
-  </video>
-  <audio autoplay controls>
-    <source src="myaudio.mp3" />
-    <source src="myaudio.ogg" />
-    <p>Audio description.</p>
-  </audio>
-</body>
-```
+  div {
+    color: blue;
+  }
+  ```
 
-## Metadata
-* The **meta** element represents metadata that cannot be represented by other HTML meta-related elements
-* This element will work as **head** element content only
-* The user won't see this element content
-* This are some of the attributes that we can configure:
-  * **author:** author which defines the name of the document's author
-  * **charset:** this attribute declares the page's character encoding
-  * **description:** contains a short and accurate summary of the content of the page
-  * **keywords:** contains words relevant to the page's content separated by commas
-  * **viewport:** gives hints about the size of the initial size of the viewport
-    * Used by mobile devices only
-    * Read the viewport MDN guide section to find out more about the different values this attribute supports
-* Read the [MDN meta doc](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta) too know more about the different attributes that we can use
+  ```html
+  <div class="red">Red Main Div</div>
+  <div>Blue div</div>
+  <div class="red">Red Main Div</div>
+  ```
 
-**Example**
-```html
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="My Site description">
-  <meta name="author" content="John Doe">
-  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-```
+* Both **id** and **class** selector can be even more specific by adding the element type before the id or class selector
 
-* Read the [Wikipedia character encoding doc](https://en.wikipedia.org/wiki/Character_encoding) to know more about how encoding works
-* [Wikipedia UTF-8 doc](https://en.wikipedia.org/wiki/UTF-8)
+  **Example:**
+  ```css
+  /* Only select the div with main id */
+  div#main { color: red; }
 
-## HTML Entity
-* An HTML entity is a piece of text ("string") that begins with an ampersand (&) and ends with a semicolon (;)
-* Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces) 
-* You can also use them in place of other characters that are difficult to type with a standard keyboard
-[MDN entity doc](https://developer.mozilla.org/en-US/docs/Glossary/Entity)
-* [List of HTML entities](https://www.freeformatter.com/html-entities.html)
+  /* Only select the paragraph with blue class */
+  p.blue { color: blue; }
+  ```
+  ```html
+  <div id="main">Red Text</div>
+  <p class="blue">Blue Text</p>
+  <p> Text</p>
+  <div class="blue">Text</div>
+  ```
 
-**Example**
-```html
-<body>
-  <p>&lt; less than</p>
-  <p>&gt; greater than</p>
-  <p>&amp; ampersand</p>
-  <p>&copy; Copyright</p>
-  <p>&reg; Registered Trademark</p>
-  <p>&trade; Trademark</p>
-</body>
-```
+## Shared CSS code between selectors
+* In some cases we need to use the same style for more than one element and we can choose:
+  * Create a class and apply it to both elements
+  * Or we can add more selectors separated by a comma
+
+  **Example:**
+  ```css
+  .red{ color: red; }
+  ```
+  ```html
+  <div class="red">Red Text</div>
+  <p class="red">Red Text</p>
+  ```
+
+* Or
+
+  **Example:**
+  ```css
+  selector1, selector2 {
+    /* CSS code */
+  }
+  ```
+
+  **Example:**
+  ```css
+  div, p { color: red; }
+  ```
+  ```html
+  <div>Red Text</div>
+  <p>Red Text</p>
+  ```
+
+## Universal selector
+* The `*` universal selector matches elements of any type
+* You can use this selector to delete the browser initial styles (Many CSS libraries do it)
+* [MDN Universal selectors doc](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors)
+
+  **Example:**
+  ```css
+  /* The universal selector will match all the elements and sets the color to white */
+  * {
+    color: white;
+  }
+  ```
+  ```html
+  <div>White div text</div>
+  <p>White paragraph text</p>
+  <span>White span text</span>
+  <a href="#">White link text</a>
+  ```
+
+## Attribute selectors
+* Selects elements based on the value of the given attribute
+* First we select the element
+* Then we add brackets
+* Between brackets we add the attribute = value
+* [MDN Attribute selectors doc](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+
+  **Example:**
+  ```css
+  /* Select all a elements that have a href="#" attribute */
+  a[href="#"] { color: pink; }
+
+  /* Select all div elements that have the name main attribute */
+  div[name="main"] { color: yellow; }
+  ```
+  ```html
+  <div name="main">Yellow div text</div>
+  <a href="#">Pink link text</a>
+  <a href="http://www.google.com"></a>
+  ```
 
 #### Practice
-[Exercise 16](exercises/html/ex_16.md)
+[Exercise 4](exercises/css/ex_4.md)
 
-[Exercise 17](exercises/html/ex_17.md)
+## Pseudo-classes selector
+* The pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s)
+* For example, :hover can be used to change a button's color when the user hovers over it
+* For links we can use the following pseudo-classes: **:link, :active, :hover & :visited**
+* See a complete Pseudo-classes list on [MDN Pseudo-classes doc](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 
-## Extra:
-[HTML5 Specs](https://dev.w3.org/html5/spec-preview/Overview.html)
+  **Example:**
+  ```css
+  a:link {
+    color: red;
+  }
 
-## Congratulations, you made it, now you know HTML!!
-![Super Hero HTML5](resources/images/html/html_superhero.jpg)
+  a:active {
+    color: pink;
+  }
 
-## Let's Checkout CSS
-* [<- Git](git.md) - [CSS ->](css.md)
+  a:hover {
+    color: gray;
+  }
+
+  a:visited {
+    color: green;
+  }
+  ```
+
+## Descendant selectors
+* This selector is represented by a single space ( ) character & combines two selectors such that elements matched by the second selector are selected if they have an ancestor element matching the first selector
+* It will apply to any element inside other element without being a direct dependency
+* [MDN Descendant selectors doc]()https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors
+
+  **Example:**
+  ```css
+  div a {
+    color: red;
+  }
+  ```
+  ```html
+  <div>
+    <a href="#">Link inside a div</a>
+    <p>
+      <a href="#">Link inside a parragraph inside a div</a>
+    </p>
+  </div>
+  ```
+
+## Child selectors
+* Using the **>** selector we can select only those elements matched by the second selector that are the direct children of elements matched by the first
+* The child combinator **>** is placed between two CSS selectors. 
+* Elements matched by the second selector must be the immediate children of the elements matched by the first selector
+* This is stricter than the descendant selector
+* [Child selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors)
+
+  **Example:**
+  ```css
+  /* Select the paragraph elements that are direct children from a div element*/
+  div > p {
+    color: red;
+  }
+  ```
+  ```html
+  <p>Black text</p>
+  <div>
+    <p>Red Text</p>
+    <table>
+      <tr>
+        <td><p>Black Text</p></td>
+      </tr>  
+    </table>
+    <h1>Black text</h1>
+  </div>
+  ```
+
+* In this example we can see that this selector only affects the div child paragraph
+
+## Pseudo-elements (Optional)
+* A CSS **pseudo-element** is a keyword added to a selector that lets you style a specific part of the selected element(s)
+* We use the **::** operator to select **pseudo-element**
+* These are the most used **pseudo-element**:
+  * ::first-line
+  * ::first-letter
+  * ::selection
+  * ::after
+  * ::before
+* The pseudo-elements ::after & ::before need to use a special property called **content**
+* [MDN Pseudo elements docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+
+  **Example:**
+  ```css
+  div::first-line {
+    color: red;
+  }
+
+  p::first-letter {
+    color: blue;
+  }
+
+  span::before {
+    content: '1';
+  }
+
+  span::after {
+    content: '2';
+  }
+  ```
+
+## Adjacent sibling combinator (Optional)
+* The **+** separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element
+
+**Example:**
+```css
+p + div {
+  color: red;
+}
+```
+```html
+<p>Parragraph content</p>
+<div>Red text sibling Div</div>
+<div>Black sibling Div</div>
+```
+
+## General sibling combinator (Optional)
+* The **~** separates two selectors and matches the second element only if it follows the first element (though not necessarily immediately), and both are children of the same parent element
+
+  **Example:**
+  ```css
+  p ~ div {
+    color: red;
+  }
+  ```
+  ```html
+  <p>Parragraph content</p>
+  <div>Red text sibling Div</div>
+  <div>Red text sibling Div</div>
+  ```
+
+#### Practice
+[Exercise 5](exercises/css/ex_5.md)
+
+## Font
+* To make our site look better we can select the font that we want to use
+* HTML elements can have text content and we can change the way it looks
+* We already saw how to change the color and now it's the time to change other font properties
+
+* [MDN Styling text Fundamentals](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+* [MDN Web Fonts Guide](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Web_fonts)
+
+### Family
+* The **font-family** property specifies a prioritized list of one or more font family names and/or generic family names for the selected element
+* Values are separated by commas to indicate that they are alternatives
+* We need to add double quotes if the font-family name has spaces in it. Example: "times new roman"
+* The browser will select the first font in the list that is installed
+* If the browser can't use the first font value it will try to use the next one in the list
+* It's a good practice to add a generic font family just in case none of the other values works for a particular browser
+* By adding a default value we make sure that at least our site has a font-family style
+* Generic family name list: **serif, sans-serif, monospace, cursive, fantasy, system-ui**
+* [MDN font-family doc](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+
+  ![Fonts](./resources/images/css/fonts.png)
+
+  **Example:**
+  ```css
+  body { font-family: serif; }
+  ```
+
+  or
+
+  ```css
+  body {
+    font-family: "Times New Roman", Times, serif;
+  }
+  ```
+
+  or
+
+  ```css
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  ```
+
+* In this case the browser will try to use the first value (Times new roman or arial depending the case)
+* We can add a different font family that might be similar to the previous one just in case the first one doesn't work
+* Finaly we add a third option with a generic font-family to make the text look the way we want in some way
+
+### Web Fonts
+* Web fonts are a CSS feature that allows you to specify font files to be downloaded along with your website as it is accessed
+* Any browser that supports web fonts can have exactly the fonts you specify available to it
+* The @font-face CSS rule allows authors to specify fonts (online url(), and locally local()), to display text on their web pages 
+* By allowing authors to provide their own fonts, @font-face eliminates the need to depend on the limited number of fonts users have installed on their computers
+* Don't forget that not all fonts are free! 
+* To use custom fonts first we need to define it
+[MDN font-face doc](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face)
+
+  **Example:**
+  ```css
+  /* We define the font Bitstream Vera Serif Bold from a external source */
+  @font-face {
+    font-family: "Bitstream Vera Serif Bold";
+    src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+  }
+
+  /* In this case we define a local (our server) font */
+  @font-face {
+    font-family: MyHelvetica;
+    src: local("Helvetica Neue Bold"),
+        local("HelveticaNeue-Bold"),
+        url(MgOpenModernaBold.ttf);
+    font-weight: bold;
+  }
+  ```
+
+* For local fonts we need to use the **src** property
+* We can use it by name or url (path to the file)
+
+  **Example:**
+  ```css
+  body {
+    font-family: "Bitstream Vera Serif Bold";
+  }
+
+  span {
+    font-family: "Helvetica Neue Bold";
+  }
+  ```
+
+* Also we can use [Google fonts](https://fonts.google.com) in our documents
+* First we need to select a font using the + icon
+* Then we'll see a dialog on the bottom righ section of the site
+* We'll have to use the **link HTML element** to add a reference to the google font site
+
+  **Example:**
+  ```html
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+  ```
+
+* After adding the reference we can call using the font name
+
+  **Example:**
+  ```css
+  body { font-family: 'IBM Plex Mono', monospace; }
+  ```
+
+* Google fonts does a great work to help us adding our fonts
+
+  ![Google fonts image](./resources/images/css/google_fonts.png)
+
+* To know more about Google Fonts read the following [guide](https://developers.google.com/fonts/docs/getting_started)
+
+### Size
+* The **font-size** property specifies the size of the font
+* Setting this property may change the size of other items, too, since it is used to compute the value of em, ex, and various other relative length units
+* Absolute value:
+  * Pixed (px)
+  * Point (pt): One point. 1pt = 1/72nd of 1in (used to print)
+* Relative values:
+  * percentage (%:
+  * (em): Represents the calculated font-size of the element. If font is 10px and 1em, then 2em is 20px
+  * Viewport Height (vh): Equal to 1% of the height of the viewport's initial containing block.
+  * Viewport Width (vw): Equal to 1% of the width of the viewport's initial containing block.
+* [MDN font-size doc](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+* [MDN length doc](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
+* [MDN percentage Doc](https://developer.mozilla.org/en-US/docs/Web/CSS/percentage)
+* [Viewport sized yypography tutorial](https://css-tricks.com/viewport-sized-typography/)
+* [Read the How to size text in css a list apart guide!](https://alistapart.com/article/howtosizetextincss)
+
+  ![Font size](./resources/images/css/size.png)
+
+  **Example:**
+  ```css
+  /* We set the body font size in 16px using a absolute value */
+  body { font-size: 16px; }
+
+  /* Now the font-size is 16px so we can use a relative value like 2em to change it (32px) */
+  h1 { font-size: 2em; }
+  ```
+
+* In the previous example if we change the body font-size it will change how every element with a relative value looks 
+
+### Weight
+* The font-weight property specifies the weight (or boldness) of the font
+* The font weights available to you will depend on the font-family you are using
+* Some fonts are only available in normal and bold
+* Font weight values:
+  * normal: same as 400
+  * bold: same as 700
+  * lighter: one font weight lighter than the parent element (among the available weights of the font)
+  * bolder: one font weight heavier than the parent element (among the available weights of the font)
+  * Number bettwen 100 & 900: numeric font weights for fonts that provide more than just normal and bold
+* [MDN font-weight doc](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+* [CSS tricks font-weight tutorial](https://css-tricks.com/almanac/properties/f/font-weight)
+
+  **Example:**
+  ```css
+  body {
+    font-weight: normal;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .bolder {
+    font-weight: bolder;
+  }
+
+  div {
+    font-weight: 600;
+  }
+  ```
+  ```html
+  <body>
+    <p>This span is <span class="bold">bold</span></p>
+    <div>
+      <p>This paragraph uses 600 font-weight and this <span class="bolder">span use 700</span></p>
+    </div>
+  </body>
+  ```
+
+### Style
+* The **font-style** CSS property specifies whether a font should be styled with a normal, italic, or oblique face from its font-family
+* [MDN font-style doc](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
+* [Stackoverflow font-style italic vs oblique](https://stackoverflow.com/questions/1680624/font-style-italic-vs-oblique-in-css)
+
+  **Example:**
+  ```css
+  .quote { font-style: oblique; }
+
+  div { font-style: italic; }
+  ```
+
+### Transform
+* The **text-transform** property specifies how to capitalize an element's text
+* This prorperty is text and not font as it's changing the text style and doesn't have to do with font
+* It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized
+* [MDN text-transform doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+
+  **Example:**
+  ```css
+  div {
+    text-transform: capitalize;
+  }
+
+  p {
+    text-transform: lowercase;
+  }
+
+  span {
+    text-transform: uppercase;
+  }
+  ```
+
+### Align
+* The **text-align** property describes how inline content like text is aligned in its parent block element
+* This property align does not control the alignment of block elements, only their inline content (just the text)
+* We can use the following values: **inherit, left, right, center, justify, justify-all, start, end, match-parent**
+  * justify-all: works in the same way tha justify, but also forces the last line to be justified
+  * start: same as left if direction is left-to-right and right if direction is right-to-left
+  * end: same as right if direction is left-to-right and left if direction is right-to-left
+  * match-parent: similar to inherit, but the values start and end are calculated according to the parent's direction and are replaced by the appropriate left or right value
+* [MDN text-align doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+
+  **Example:**
+  ```css
+  body { text-align: left; }
+
+  .right { text-align: right; }
+  .justify { text-align: justify; }
+  ```
+
+  ```html
+  <body>
+    <p>Normal text in a paragraph</p>
+    <div class="right">This text it's aligned to the right</div>
+    <div class="justify">If we add a long text it's going to be justified</div>
+  </body>
+  ```
+
+
+⚠️Optional - Starts From here to the end of this doc.
+### Decoration
+
+#### Line 
+* The **text-decoration-line**  property sets the kind of decoration that is used on text in an element
+* Property values: none, underline, overline, line-through, blink
+* We can add more than one value to this property
+* [MDN text-decoration-line doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-line)
+
+  **Example:**
+  ```css
+  div {
+    text-decoration-line: overline;
+  }
+
+  p {
+    text-decoration-line: line-through overline ;
+  }
+  ```
+
+#### Color
+* The **text-decoration-color** property sets the color of the decorative additions to text that are specified by text-decoration-line
+* We can use it with underlines and overlines, strikethroughs, and wavy lines
+* The specified color applies to all such decorative lines in the scope of the property's value
+* [MDN text-decoration-color doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-color)
+
+  **Example:**
+  ```css
+  div {
+    text-decoration-line: overline;
+    text-decoration-color: red;
+  }
+  ```
+
+#### Style
+* The **text-decoration-style** property sets the style of the lines specified by **text-decoration-line**
+* The style applies to all lines that are specified; there is no way to define different styles for each of the lines defined by text-decoration-line
+* Property values: **solid, double, dotted, dashed, wavy**
+* [MDN text-decoration-style doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-style)
+
+**Example:**
+```css
+div {
+  text-decoration-line: overline;
+  text-decoration-color: red;
+  text-decoration-style: dashed;
+}
+```
+
+#### Single definition
+
+* The **text-decoration** property specifies the appearance of decorative lines used on text
+* It's a shorthand for setting one or more individual text-decoration values in a single declaration
+* Format syntax: text-decoration-style text-decoration-line text-decoration-color
+* [MDN text-decoration doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+
+  **Example:**
+  ```css
+  div {
+    text-decoration: dashed underline red;
+  }
+
+  /* same as: */
+  div {
+    text-decoration-style: dashed;
+    text-decoration-line: underline;
+    text-decoration-color: red;
+  }
+  ```
+
+### Indent
+* The **text-indent** property specifies the amount of indentation (empty space) that is put before lines of text in a block
+* [MDN text-indent doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+
+  **Example:**
+  ```css
+  div {
+    text-indent: 10px;
+  }
+
+  p {
+    text-indent: 15%;
+  }
+  ```
+
+### Shadow
+* The **text-shadow** property adds shadows to text
+* It accepts a comma-separated list of shadows to be applied to the text and any of its decorations
+* Each shadow is described by some combination of **X and Y offsets from the element, blur radius, and color**
+* Shadow values:
+  * The first two `length` values are the **offset-x** and **offset-y** values
+  * The third, optional, `length` value is the **blur-radius**
+  * The `color` value is the **shadow's color**
+* [MDN text-shadow doc](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+* [CSS3 text-shadow generator](http://www.cssportal.com/css3-text-shadow-generator)
+* [CSS Tricks - CSS text-shadow](https://css-tricks.com/snippets/css/css-text-shadow)
+
+  **Example:**
+  ```css
+  div{
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 5px 5px 1px black; 
+  }
+  ```
+
+### Letter Spacing
+* The **letter-spacing**  property specifies the spacing behavior between text characters
+* [MDN letter-spacing doc](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+
+  **Example:**
+  ```css
+  p {
+    letter-spacing: 3px;
+  }
+  ```
+
+* The **word-spacing** property specifies the spacing behavior between tags and words
+* [MDN word-spacing doc](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
+
+  **Example:**
+  ```css
+  div {
+    word-spacing: 2px;
+  }
+  ```
+
+### Line height
+* The **line-height** property sets the amount of space used for lines, such as in text
+* On block-level elements, it specifies the minimum height of line boxes within the element
+* On non-replaced inline elements, it specifies the height that is used to calculate line box height
+* Property values:
+  * normal: depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly 1.2, depending on the element's font-family
+  * number: the used value is this unitless number multiplied by the element's own font size. 
+    * The computed value is the same as the specified number
+    * In most cases, this is the preferred way to set line-height and avoid unexpected results due to inheritance
+    * length: is used in the calculation of the line box height
+      * Values given in em units may produce unexpected results
+    * percentage: relative to the font size of the element itself
+      * The computed value is this **percentage** multiplied by the element's computed font size
+      * Percentage values may produce unexpected results
+* [MDN line-height doc](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+* [CSS Tricks - line-height](https://css-tricks.com/almanac/properties/l/line-height)
+
+  **Example:**
+  ```css
+  /* 10 * 1.2 => 12 */
+  div { 
+    font-size: 10pt;
+    line-height: 1.2;
+  }
+  ```
+
+#### Practice
+[Exercise 6](exercises/css/ex_6.md)
+
+### Vertical Align
+* The **vertical-align** property specifies the vertical alignment of an inline or table-cell box
+* This property only applies to inline and table-cell elements (you can't use it to vertically align block-level elements)
+* Property values: **baseline, sub, super, text-top, text-bottom, middle, top, bottom**
+* [MDN vertical-align doc](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
+* [CSS Tricks - vertical-align](https://css-tricks.com/almanac/properties/v/vertical-align)
+* [CSS Tricks - What is vertical align?](https://css-tricks.com/what-is-vertical-align)
+
+  **Example:**
+  ```css
+  img {
+    vertical-align: text-top;
+  }
+  ```
+
+#### Practice
+[Exercise 7](exercises/css/ex_7.md)
+
+⚠️Optional - End.
