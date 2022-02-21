@@ -54,6 +54,20 @@ The well-reviewed sci-fi thriller “Annihilation” opened with $11 million.![B
   ```html
   <tagname>
   ```
+## Create a simple HTML document in VS Code
+Look at this picture:
+![create_html](./resources/images/create_html.gif)
 
 ## Basic HTML Tags
 https://www.w3schools.com/tags/ref_byfunc.asp
+
+<!DOCTYPE> 	Defines the document type
+<html>	Defines an HTML document
+<head>	Contains metadata/information for the document
+<title>	Defines a title for the document
+<body>	Defines the document's body
+<h1> to <h6>	Defines HTML headings
+<p>	Defines a paragraph
+<br>	Inserts a single line break
+<hr>	Defines a thematic change in the content
+<!--...-->	Defines a comment
