@@ -1,5 +1,8 @@
 ```js
+
+// name this file as a ttt.js or anything you like
 // run `npm install prompt-sync` in your bash
+// ⚠️This code is a simplified version for educational purpose, there might be some issue/bugs in this code
 const prompt = require("prompt-sync")();
 //
 // get input from the user.
@@ -106,7 +109,7 @@ function userInput() {
 }
 
 function setBoardX(index) {
-  // This is a Smart AI!
+  // This is a Smart AI!😊
   if (board[index] == emptyCell) {
     board[index] = " x ";
     return;
@@ -123,33 +126,32 @@ showBoard();
 userInput();
 showBoard();
 
+// ⚠️issue found here, there're some repeated code, how could we improve it?
+let computerTurn;
 
-let computerTurn = getRandomInt(9);
+computerTurn= getRandomInt(9);
 setBoardX(computerTurn);
 showBoard();
-
 userInput();
 showBoard();
 
 computerTurn = getRandomInt(9);
 setBoardX(computerTurn);
 showBoard();
-
 userInput();
 showBoard();
 
 computerTurn = getRandomInt(9);
 setBoardX(computerTurn);
 showBoard();
-
 userInput();
 showBoard();
 
 computerTurn = getRandomInt(9);
 setBoardX(computerTurn);
 showBoard();
-
 userInput();
 showBoard();
 
+// ℹ️ Challenge: try to find any bugs/issues in this code
 ```
