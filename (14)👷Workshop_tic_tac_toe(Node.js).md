@@ -2,7 +2,7 @@
 
 // name this file as a ttt.js or anything you like
 // run `npm install prompt-sync` in your bash
-// ⚠️This code is a simplified version for educational purpose, there might be some issue/bugs in this code
+// ⚠️This code is a simplified version for educational purpose, there might be some edge cases, or even small issue/bugs
 const prompt = require("prompt-sync")();
 //
 // get input from the user.
@@ -153,5 +153,8 @@ showBoard();
 userInput();
 showBoard();
 
-// ℹ️ Challenge: try to find any bugs/issues in this code
+// ℹ️ Challenge: try to fix any issue you find in this code
+// Hint: what if I input a number that is not in the range of [0, 9]?
+// Hint: what if I input a number that is already taken?
+// Hint: what if I input a number that is not a number? ( type of )
 ```
