@@ -1492,3 +1492,14 @@ Create a simple header with Bootstrap:
 [Header.zip](/back_up/headers.zip)
 
 
+## Basic components button🕙
+
+https://getbootstrap.com/docs/5.1/components/buttons/
+
+
+## Exercises try to add a Carousel in your web page
+
+https://getbootstrap.com/docs/5.1/components/carousel/
+
+
+
