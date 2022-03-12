@@ -1461,7 +1461,34 @@
 https://www.w3schools.com/css/css_boxmodel.asp
 
 * * *
+For the web development, 
+we can use pure HTML and CSS to create a web page.
+
+
+How do we quickly develop some web pages?
+we can use some frameworks such as React, Vue, Angular, or even Bootstrap.
+
+Bootstrap is one of the most popular frameworks for web development, and 
+it's very similar to the pure HTML and CSS we've been learning.
 
 🥾 Bootstrap 
 
 Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+
+Home page: https://getbootstrap.com/ 🕙
+
+How to use the examples to help you build your own web page:
+
+(1) Visit https://getbootstrap.com/docs/5.1/examples/
+(2) Download the examples
+(3) Extract the files
+(4) Go to any folder and open index.html, try to see what you can get
+
+
+Create a simple header with Bootstrap:
+
+## create a simple header with Bootstrap 🕙
+
+[Header.zip](back_up/header.zip)
+
+
