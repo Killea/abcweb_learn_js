@@ -167,7 +167,7 @@
   **Example:**
 
   ```js
-  function(firstParameter, secondParameter, thirdParameter) {
+  function functionWithParameters(firstParameter, secondParameter, thirdParameter) {
     console.log(firstParameter, secondParameter, thirdParameter);
   }
   ```
