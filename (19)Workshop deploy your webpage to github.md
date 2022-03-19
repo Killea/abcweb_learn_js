@@ -35,3 +35,14 @@ This step is no mandatory but if you think you need to see the changes ASAP, do 
 (10) Try to add more features to your website😀
 
 (11) By the way, you could create as many repos as you can.
+
+(12) The links
+
+https://github.com/Killea/mytest  (this is your repo, the code)
+
+https://killea.github.io/mytest/ (this is the website)
+
+(13) Plus set a custom domain for you website!🙌
+However, buying a domain will cost your some money. Think twice before you do this😄
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+
