@@ -1,1 +1,0 @@
-(1) Register github account
