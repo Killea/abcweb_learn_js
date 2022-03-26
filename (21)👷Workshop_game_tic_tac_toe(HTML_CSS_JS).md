@@ -1,3 +1,13 @@
+Check the code: 
+
+https://github.com/Killea/html-test0/blob/main/index.html
+
+(1) how to change the label of a button
+
+(2) how to call an API from a back-end
+
+
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
